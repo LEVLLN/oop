@@ -1,4 +1,4 @@
-package com.epam.lk;
+package com.epam.lk.entity;
 
 import com.epam.lk.entity.Edition;
 
