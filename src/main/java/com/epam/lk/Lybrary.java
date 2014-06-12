@@ -1,5 +1,7 @@
 package com.epam.lk;
 
+import com.epam.lk.entity.Edition;
+
 import java.util.ArrayList;
 import java.util.List;
 

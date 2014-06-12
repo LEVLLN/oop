@@ -1,4 +1,4 @@
-package com.epam.lk;
+package com.epam.lk.entity;
 
 
 import java.sql.Date;
