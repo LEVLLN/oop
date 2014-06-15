@@ -1,4 +1,7 @@
 package com.epam.lk.entity;
 
-public abstract class Newspaper extends Edition {
+public class Newspaper extends Publication {
+    private int editionNum;
+    private String header;
+
 }

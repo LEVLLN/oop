@@ -1,6 +1,7 @@
 package com.epam.lk.entity;
 
-public abstract class Book extends Edition {
-
+public class Book extends Publication {
+    int volume;
+    boolean reprint;
 
 }
