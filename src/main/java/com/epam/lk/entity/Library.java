@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Library {
+
     private int id;
     private List<Publication> publications;
     private String name;
@@ -16,6 +17,9 @@ public class Library {
         this.publications = new ArrayList<Publication>();
         this.name = name;
     }
+
+
+    //  Setter and Getter
 
     public int getId() {
         return id;
@@ -39,14 +43,6 @@ public class Library {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void addEdition(Publication publication) {
-        publications.add(publication);
-    }
-
-    public void sortByTitle(Publication publication) {
-
     }
 
 
