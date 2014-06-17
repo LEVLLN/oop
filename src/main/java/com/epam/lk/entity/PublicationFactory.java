@@ -8,9 +8,10 @@ import java.util.List;
 
 public class PublicationFactory {
 
-    public PublicationFactory() {
-    }
+   private enum Type{
+       BOOK,JOURNAL,NEWSPAPER
 
+    }
     // TODO: createRandomizedBook
 
     public static Publication createPublication(String title, int id, Date publicationDate, List<Author> author, BigDecimal price) {
