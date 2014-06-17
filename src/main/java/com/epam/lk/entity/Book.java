@@ -4,6 +4,15 @@ public class Book extends Publication {
     private int volume;
     private boolean reprint;
 
+    @Override
+    public String toString() {
+        return "Book{" +
+                "volume=" + volume +
+                ", reprint=" + reprint +
+                '}';
+    }
+
+
     // Setter and getter
 
 

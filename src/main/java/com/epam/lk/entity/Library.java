@@ -18,8 +18,16 @@ public class Library {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "Library{" +
+                "id=" + id +
+                ", publications=" + publications +
+                ", name='" + name + '\'' +
+                '}';
+    }
 
-    //  Setter and Getter
+//  Setter and Getter
 
     public int getId() {
         return id;

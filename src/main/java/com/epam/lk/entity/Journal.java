@@ -5,6 +5,15 @@ public class Journal extends Publication {
     private int editionNum;
     private String header;
 
+    @Override
+    public String toString() {
+        return "Journal{" +
+                "editionNum=" + editionNum +
+                ", header='" + header + '\'' +
+                '}';
+    }
+
+
     // Setter and getter
 
     public int getEditionNum() {

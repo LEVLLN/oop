@@ -5,6 +5,15 @@ public class Author {
     private String name;
     private String secondName;
 
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", secondName='" + secondName + '\'' +
+                '}';
+    }
+
     // Setter and getter
 
     public int getId() {

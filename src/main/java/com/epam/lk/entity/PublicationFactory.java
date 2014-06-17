@@ -2,6 +2,10 @@ package com.epam.lk.entity;
 
 import com.epam.lk.entity.Publication;
 
+import java.math.BigDecimal;
+import java.util.Date;
+import java.util.List;
+
 public class PublicationFactory {
 
     public PublicationFactory() {
@@ -9,9 +13,9 @@ public class PublicationFactory {
 
     // TODO: createRandomizedBook
 
-    public static void createRandomized(Publication publication) {
-        for (int i = 0; i < 20; i++) {
-        }
+    public static Publication createPublication(String title, int id, Date publicationDate, List<Author> author, BigDecimal price) {
+        Publication publication = new Publication(title,id,publicationDate,author,price);
+        return  publication;
 
     }
 }

@@ -6,6 +6,8 @@ import com.epam.lk.entity.Publication;
 
 public class Runner {
     public static void main(String[] args) {
-       PublicationFactory.createRandomized(null);
+   Publication publication = new Publication();
+        publication.getAuthor();
+        publication.getId();
     }
 }

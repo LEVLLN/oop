@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public abstract class Publication {
+public class Publication {
 
     private String title;
     private int id;
@@ -15,7 +15,27 @@ public abstract class Publication {
     private List<Author> author;
     public Publication(){ this.author = new ArrayList<Author>();}
 
-    // Setter and getter
+    protected Publication(String title, int id, Date publicationDate, List<Author> author, BigDecimal price) {
+        this.title = title;
+        this.id = id;
+        this.publicationDate = publicationDate;
+        this.author = author;
+        this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Publication{" +
+                "title='" + title + '\'' +
+                ", id=" + id +
+                ", publicationDate=" + publicationDate +
+                ", price=" + price +
+                ", author=" + author +
+                '}';
+    }
+
+
+// Setter and getter
 
 
     public String getTitle() {

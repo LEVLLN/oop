@@ -5,6 +5,15 @@ public class Newspaper extends Publication {
     private int editionNum;
     private String header;
 
+    @Override
+    public String toString() {
+        return "Newspaper{" +
+                "editionNum=" + editionNum +
+                ", header='" + header + '\'' +
+                '}';
+    }
+
+
     // Setter and getter
 
 
