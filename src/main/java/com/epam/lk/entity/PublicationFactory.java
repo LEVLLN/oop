@@ -8,15 +8,26 @@ import java.util.List;
 
 public class PublicationFactory {
 
-   private enum Type{
+
+
+public enum Type{
        BOOK,JOURNAL,NEWSPAPER
 
     }
     // TODO: createRandomizedBook
+    public static Publication createPublication( Type type,String title, int id, Date publicationDate, List<Author> author, BigDecimal price) {
+       switch (type){
+           case BOOK :
+               Publication publication = new Book();
+               case JOURNAL:
+                   Publication publication1 = new Journal();
+                   case  NEWSPAPER:
+                       Publication publication2 = new Newspaper();
+       }
 
-    public static Publication createPublication(String title, int id, Date publicationDate, List<Author> author, BigDecimal price) {
         Publication publication = new Publication(title,id,publicationDate,author,price);
         return  publication;
+
 
     }
 }

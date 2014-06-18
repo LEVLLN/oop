@@ -74,7 +74,7 @@ public class Publication {
         return author;
     }
 
-    public void setAuthor(List<Author> author) {
+    public void setAuthor() {
         this.author = author;
     }
 }

@@ -14,7 +14,12 @@ public class Author {
                 '}';
     }
 
-    // Setter and getter
+    public Author(int id, String name, String secondName) {
+        this.id = id;
+        this.name = name;
+        this.secondName = secondName;
+    }
+// Setter and getter
 
     public int getId() {
         return id;
