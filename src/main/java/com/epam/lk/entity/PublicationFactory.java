@@ -14,17 +14,18 @@ public class PublicationFactory {
     public static Publication createPublication(Type type) {
         switch (type) {
             case BOOK:
-                Publication book = new Book();
+                Book book = new Book();
                 book.setId(54);
                 book.setTitle("...");
                 return book;
             case JOURNAL:
-                Publication journal = new Journal();
+                Journal journal = new Journal();
                 return journal;
             case NEWSPAPER:
-                Publication newspaper = new Newspaper();
-                newspaper.setTitle("JUJU");
+                Newspaper newspaper = new Newspaper();
+                newspaper.setTitle("lol");
                 newspaper.setId(1);
+                newspaper.setEditionNum(6);
 
                 return newspaper;
 
