@@ -18,11 +18,10 @@ public class Book extends Publication {
         return "Book{" +
                 "volume=" + volume +
                 ", reprint=" + reprint +
-                '}';
+                "} " + super.toString();
     }
 
-
-    // Setter and getter
+// Setter and getter
 
 
     public int getVolume() {

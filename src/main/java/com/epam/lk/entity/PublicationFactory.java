@@ -7,25 +7,41 @@ import java.util.Date;
 import java.util.List;
 
 public class PublicationFactory {
-
-
-
-public enum Type{
-       BOOK,JOURNAL,NEWSPAPER
-
+    @Override
+    public String toString() {
+        return super.toString();
     }
+
+    public PublicationFactory() {
+    }
+
+    public enum Type{
+       BOOK,JOURNAL,NEWSPAPER;
+
+    Type() {
+    }
+}
     // TODO: createRandomizedBook
-    public static Publication createPublication( Type type,String title, int id, Date publicationDate, List<Author> author, BigDecimal price) {
+    public static Publication createPublication(Type type) {
        switch (type){
            case BOOK :
-               Publication publication = new Book();
+               Publication book = new Book();
+               book.setId(54);
+               book.setTitle("...");
+               return book;
                case JOURNAL:
-                   Publication publication1 = new Journal();
+                   Publication journal = new Journal();
+                   return journal;
                    case  NEWSPAPER:
-                       Publication publication2 = new Newspaper();
+                       Publication newspaper = new Newspaper();
+                       newspaper.setTitle("JUJU");
+                       newspaper.setId(1);
+
+                       return  newspaper;
+
        }
 
-        Publication publication = new Publication(title,id,publicationDate,author,price);
+        Publication publication = new Publication();
         return  publication;
 
 

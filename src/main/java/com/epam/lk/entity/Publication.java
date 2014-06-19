@@ -58,8 +58,9 @@ public class Publication {
         return price;
     }
 
+    //todo: bigdecimal working
     public void setPrice(BigDecimal price) {
-        this.price = price;
+        this.price=price;
     }
 
     public Date getPublicationDate() {
