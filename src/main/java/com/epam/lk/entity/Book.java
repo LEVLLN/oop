@@ -21,9 +21,6 @@ public class Book extends Publication {
                 "} " + super.toString();
     }
 
-// Setter and getter
-
-
     public int getVolume() {
         return volume;
     }

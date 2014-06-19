@@ -5,6 +5,12 @@ public class Author {
     private String name;
     private String secondName;
 
+    public Author(int id, String name, String secondName) {
+        this.id = id;
+        this.name = name;
+        this.secondName = secondName;
+    }
+
     @Override
     public String toString() {
         return "Author{" +
@@ -13,13 +19,6 @@ public class Author {
                 ", secondName='" + secondName + '\'' +
                 '}';
     }
-
-    public Author(int id, String name, String secondName) {
-        this.id = id;
-        this.name = name;
-        this.secondName = secondName;
-    }
-// Setter and getter
 
     public int getId() {
         return id;

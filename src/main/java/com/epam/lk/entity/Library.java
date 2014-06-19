@@ -27,8 +27,6 @@ public class Library {
                 '}';
     }
 
-//  Setter and Getter
-
     public int getId() {
         return id;
     }

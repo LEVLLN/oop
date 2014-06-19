@@ -6,14 +6,17 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Publication {
+public abstract class Publication {
 
     private String title;
     private int id;
     private Date publicationDate;
     private BigDecimal price;
     private List<Author> author;
-    public Publication(){ this.author = new ArrayList<Author>();}
+
+    public Publication() {
+        this.author = new ArrayList<Author>();
+    }
 
     protected Publication(String title, int id, Date publicationDate, List<Author> author, BigDecimal price) {
         this.title = title;
@@ -33,9 +36,6 @@ public class Publication {
                 ", author=" + author +
                 '}';
     }
-
-
-// Setter and getter
 
 
     public String getTitle() {
@@ -58,9 +58,9 @@ public class Publication {
         return price;
     }
 
-    //todo: bigdecimal working
+
     public void setPrice(BigDecimal price) {
-        this.price=price;
+        this.price = price;
     }
 
     public Date getPublicationDate() {

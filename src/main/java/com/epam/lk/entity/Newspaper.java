@@ -13,9 +13,6 @@ public class Newspaper extends Publication {
                 "} " + super.toString();
     }
 
-// Setter and getter
-
-
     public int getEditionNum() {
         return editionNum;
     }

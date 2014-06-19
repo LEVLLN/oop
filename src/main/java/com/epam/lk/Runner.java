@@ -13,19 +13,15 @@ import java.math.BigDecimal;
 public class Runner {
     public static void main(String[] args) {
 
-   Publication publication;
+        Publication publication;
 
-      publication = PublicationFactory.createPublication(PublicationFactory.Type.NEWSPAPER);
+        publication = PublicationFactory.createPublication(PublicationFactory.Type.NEWSPAPER);
 
 
         System.out.println(publication);
 
 
-
-
-
     }
-
 
 
 }

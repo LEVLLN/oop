@@ -13,7 +13,6 @@ public class Journal extends Publication {
                 "} " + super.toString();
     }
 
-// Setter and getter
 
     public int getEditionNum() {
         return editionNum;
