@@ -10,7 +10,7 @@ public class Newspaper extends Publication {
         return "Newspaper{" +
                 "editionNum=" + editionNum +
                 ", header='" + header + '\'' +
-                "} " + super.toString();
+                " " + super.toString();
     }
 
     public int getEditionNum() {

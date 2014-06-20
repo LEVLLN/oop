@@ -11,6 +11,11 @@ public class Author {
         this.secondName = secondName;
     }
 
+    public Author() {
+
+    }
+
+
     @Override
     public String toString() {
         return "Author{" +

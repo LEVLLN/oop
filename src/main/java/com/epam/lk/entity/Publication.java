@@ -2,23 +2,24 @@ package com.epam.lk.entity;
 
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
+import java.util.Random;
 
 public abstract class Publication {
 
+    public static Random rnd = new Random();
     private String title;
     private int id;
     private Date publicationDate;
     private BigDecimal price;
-    private List<Author> author;
+    private Author author;
+
 
     public Publication() {
-        this.author = new ArrayList<Author>();
+        this.author = new Author();
     }
 
-    protected Publication(String title, int id, Date publicationDate, List<Author> author, BigDecimal price) {
+    protected Publication(String title, int id, Date publicationDate, Author author, BigDecimal price) {
         this.title = title;
         this.id = id;
         this.publicationDate = publicationDate;
@@ -28,12 +29,12 @@ public abstract class Publication {
 
     @Override
     public String toString() {
-        return "Publication{" +
-                "title='" + title + '\'' +
+        return " " +
+                ", title='" + title + '\'' +
                 ", id=" + id +
                 ", publicationDate=" + publicationDate +
                 ", price=" + price +
-                ", author=" + author +
+                ", author" + author +
                 '}';
     }
 
@@ -71,11 +72,11 @@ public abstract class Publication {
         this.publicationDate = publicationDate;
     }
 
-    public List<Author> getAuthor() {
+    public Author getAuthor() {
         return author;
     }
 
-    public void setAuthor() {
+    public void setAuthor(Author author) {
         this.author = author;
     }
 }

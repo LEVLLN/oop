@@ -10,9 +10,8 @@ public class Journal extends Publication {
         return "Journal{" +
                 "editionNum=" + editionNum +
                 ", header='" + header + '\'' +
-                "} " + super.toString();
+                " " + super.toString();
     }
-
 
     public int getEditionNum() {
         return editionNum;

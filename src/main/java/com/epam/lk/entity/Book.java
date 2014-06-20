@@ -1,16 +1,16 @@
 package com.epam.lk.entity;
 
-import java.math.BigDecimal;
-import java.util.Date;
-import java.util.List;
-
 public class Book extends Publication {
+
     private int volume;
     private boolean reprint;
 
-    public Book() {
+    public Book(int volume, boolean reprint) {
         this.volume = volume;
         this.reprint = reprint;
+    }
+
+    public Book() {
     }
 
     @Override
@@ -18,7 +18,7 @@ public class Book extends Publication {
         return "Book{" +
                 "volume=" + volume +
                 ", reprint=" + reprint +
-                "} " + super.toString();
+                " " + super.toString();
     }
 
     public int getVolume() {
