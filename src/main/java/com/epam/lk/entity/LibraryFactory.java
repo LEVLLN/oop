@@ -4,7 +4,7 @@ public class LibraryFactory {
 
     public static Library createLibrary() {
 
-        int quantity=(int)(Math.random()*(10-2));
+        int quantity=(int)(2+Publication.rnd.nextInt(16));
 
         Library publications = new Library();
 
