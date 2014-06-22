@@ -2,37 +2,55 @@ package com.epam.lk.entity;
 
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.util.Comparator;
 import java.util.Random;
 
-public abstract class Publication {
+public abstract class Publication implements Comparable<Publication>, Cloneable {
 
     public static Random rnd = new Random();
+    public static Comparator<Publication> titleComparator = new Comparator<Publication>() {
+        @Override
+        public int compare(Publication t1, Publication t2) {
+            String titleOne = t1.getTitle();
+            String titleTwo = t2.getTitle();
+            return titleOne.compareTo(titleTwo);
+        }
+    };
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return (Publication)super.clone();
+    }
+
+    public static Comparator<Publication> idComparator = new Comparator<Publication>() {
+        @Override
+        public int compare(Publication i1, Publication i2) {
+            Integer id1 = i1.getId();
+            Integer id2 = i2.getId();
+            return id1.compareTo(id2);
+
+        }
+    };
     private String title;
     private int id;
-    private Date publicationDate;
     private BigDecimal price;
     private Author author;
-
 
     public Publication() {
         this.author = new Author();
     }
 
-    protected Publication(String title, int id, Date publicationDate, Author author, BigDecimal price) {
+    protected Publication(String title, int id, Author author, BigDecimal price) {
         this.title = title;
         this.id = id;
-        this.publicationDate = publicationDate;
         this.author = author;
         this.price = price;
     }
 
     @Override
     public String toString() {
-        return " " +
-                ", title='" + title + '\'' +
+        return "title='" + title + '\'' +
                 ", id=" + id +
-                ", publicationDate=" + publicationDate +
                 ", price=" + price +
                 ", author" + author +
                 '}';
@@ -59,17 +77,8 @@ public abstract class Publication {
         return price;
     }
 
-
     public void setPrice(BigDecimal price) {
         this.price = price;
-    }
-
-    public Date getPublicationDate() {
-        return publicationDate;
-    }
-
-    public void setPublicationDate(Date publicationDate) {
-        this.publicationDate = publicationDate;
     }
 
     public Author getAuthor() {

@@ -1,11 +1,10 @@
 package com.epam.lk;
 
 
-import com.epam.lk.entity.Author;
-import com.epam.lk.entity.AuthorFactory;
-import com.epam.lk.entity.Publication;
-import com.epam.lk.entity.PublicationFactory;
+import com.epam.lk.entity.*;
 import org.apache.log4j.Logger;
+
+import java.util.TreeSet;
 
 
 public class Runner {
@@ -14,16 +13,20 @@ public class Runner {
 
     public static void main(String[] args) {
 
+    Library  publications = new Library();
 
-        Publication publication;
-        Author author;
+    publications = LibraryFactory.createLibrary();
 
-            author = AuthorFactory.createAuthor();
+    LOGGER.info(publications+"\n");
 
-            publication = PublicationFactory.createPublication(PublicationFactory.Type.BOOK);
+    publications.sortByTitle();
+    LOGGER.info("\n"+"Sorting by title: \n"+publications+"\n");
 
-            LOGGER.info("Info about new publication: "+"\n"+publication);
+    publications.sortById();
+    LOGGER.info("\n"+"Sorting by ID: \n"+publications+"\n");
+
     }
+
 
 
 }

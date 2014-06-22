@@ -7,10 +7,9 @@ public class Newspaper extends Publication {
 
     @Override
     public String toString() {
-        return "Newspaper{" +
+        return "\n" + "Newspaper{" + super.toString() +
                 "editionNum=" + editionNum +
-                ", header='" + header + '\'' +
-                " " + super.toString();
+                ", header='" + header + '\'';
     }
 
     public int getEditionNum() {
@@ -27,5 +26,10 @@ public class Newspaper extends Publication {
 
     public void setHeader(String header) {
         this.header = header;
+    }
+
+    @Override
+    public int compareTo(Publication o) {
+        return 0;
     }
 }

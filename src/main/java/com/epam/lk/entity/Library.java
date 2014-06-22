@@ -1,6 +1,7 @@
 package com.epam.lk.entity;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Library {
@@ -21,9 +22,8 @@ public class Library {
     @Override
     public String toString() {
         return "Library{" +
-                "id=" + id +
+                "id=" + id + ", name='" + name + '\'' +
                 ", publications=" + publications +
-                ", name='" + name + '\'' +
                 '}';
     }
 
@@ -51,6 +51,16 @@ public class Library {
         this.name = name;
     }
 
+    public void addPublication(Publication publication) {
+        publications.add(publication);
+    }
 
+
+    public void sortByTitle() {
+        Collections.sort(publications, Publication.titleComparator);
+    }
+
+    public void sortById() {
+        Collections.sort(publications, Publication.idComparator);
+    }
 }
-

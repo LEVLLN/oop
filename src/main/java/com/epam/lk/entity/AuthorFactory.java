@@ -7,9 +7,8 @@ public class AuthorFactory {
         Author author = new Author();
 
         author.setId(Publication.rnd.nextInt(1000));
-        author.setName("...");
-        author.setSecondName("...");
-
+        author.setName(RandomStringGetter.getString(RandomStringGetter.AUTHOR_NAME));
+        author.setLastName(RandomStringGetter.getString(RandomStringGetter.AUTHOR_LASTNAME));
 
         return author;
     }

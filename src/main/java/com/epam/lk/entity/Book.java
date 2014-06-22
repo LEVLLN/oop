@@ -15,10 +15,10 @@ public class Book extends Publication {
 
     @Override
     public String toString() {
-        return "Book{" +
+        return "\n" + "Book{" + super.toString() +
                 "volume=" + volume +
-                ", reprint=" + reprint +
-                " " + super.toString();
+                ", reprint=" + reprint;
+
     }
 
     public int getVolume() {
@@ -37,4 +37,8 @@ public class Book extends Publication {
         this.reprint = reprint;
     }
 
+    @Override
+    public int compareTo(Publication o) {
+        return 0;
+    }
 }

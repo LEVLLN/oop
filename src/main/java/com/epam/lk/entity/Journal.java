@@ -7,10 +7,9 @@ public class Journal extends Publication {
 
     @Override
     public String toString() {
-        return "Journal{" +
+        return "\n" + "Journal{" + super.toString() +
                 "editionNum=" + editionNum +
-                ", header='" + header + '\'' +
-                " " + super.toString();
+                ", header='" + header + '\'';
     }
 
     public int getEditionNum() {
@@ -27,5 +26,9 @@ public class Journal extends Publication {
 
     public void setHeader(String header) {
         this.header = header;
+    }
+
+    public int compareTo(Publication o) {
+        return 0;
     }
 }
