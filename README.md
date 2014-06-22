@@ -1,3 +1,3 @@
 README
 ======
-Library and book's
+Library and books
