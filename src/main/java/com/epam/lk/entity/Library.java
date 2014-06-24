@@ -1,10 +1,16 @@
 package com.epam.lk.entity;
 
+import org.apache.log4j.Logger;
+
+import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+
 public class Library {
+
+    private static final Logger LOGGER = org.apache.log4j.Logger.getLogger(Library.class);
 
     private int id;
     private List<Publication> publications;
@@ -55,12 +61,33 @@ public class Library {
         publications.add(publication);
     }
 
-
     public void sortByTitle() {
         Collections.sort(publications, Publication.titleComparator);
+        LOGGER.info("\n" + "Sorting by title: \n" + publications + "\n");
     }
 
     public void sortById() {
         Collections.sort(publications, Publication.idComparator);
+        LOGGER.info("\n" + "Sorting by ID: \n" + publications + "\n");
     }
+
+    private List<Publication> getFilteredList(SearchFilter f) {
+        List<Publication> result = new ArrayList<Publication>();
+        for (Publication publication : publications) {
+            if (f.filter(publication))
+                result.add(publication);
+        }
+        return result;
+    }
+
+    public List<Publication> filterByTitle(String title) {
+        if (null == title) throw new InvalidParameterException("Title cannot be null");
+        List<Publication> result;
+        result = getFilteredList(p -> p.getTitle() == title);
+        LOGGER.info("Publications with title:" +title + ") quantities:" + result.size()  + " request: \n" + result.toString());
+        return result;
+    }
+
+
 }
+

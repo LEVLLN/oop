@@ -19,11 +19,11 @@ public class Runner {
 
     LOGGER.info(publications+"\n");
 
-    publications.sortByTitle();
-    LOGGER.info("\n"+"Sorting by title: \n"+publications+"\n");
+   // publications.sortByTitle();
 
-    publications.sortById();
-    LOGGER.info("\n"+"Sorting by ID: \n"+publications+"\n");
+   // publications.sortById();
+
+   //  publications.filterByTitle("News");
 
     }
 

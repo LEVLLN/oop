@@ -3,6 +3,7 @@ package com.epam.lk.entity;
 
 import java.math.BigDecimal;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Random;
 
 public abstract class Publication implements Comparable<Publication>, Cloneable {
@@ -88,4 +89,6 @@ public abstract class Publication implements Comparable<Publication>, Cloneable 
     public void setAuthor(Author author) {
         this.author = author;
     }
+
+
 }
