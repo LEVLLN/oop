@@ -1,6 +1,8 @@
 package com.epam.lk.entity;
 
 
+import org.apache.log4j.Logger;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,6 +10,7 @@ import java.io.InputStreamReader;
 import java.util.Random;
 
 public class RandomStringGetter {
+    private static Logger LOGGER = Logger.getLogger(RandomStringGetter.class);
     public static final int MAX_LINE_NUMBER = 15;
     public static final String AUTHOR_NAME = "author_name.txt";
     public static final String AUTHOR_LASTNAME = "author_lastname.txt";
@@ -21,7 +24,7 @@ public class RandomStringGetter {
         try {
             return runThroughFile(fileName, RND.nextInt(MAX_LINE_NUMBER));
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error("Error");
         }
         return NO_RESULT;
     }
